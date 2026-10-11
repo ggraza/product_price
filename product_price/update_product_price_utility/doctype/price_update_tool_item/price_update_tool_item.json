@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "creation": "2026-10-12 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "column_break_dbebt",
+  "uom",
+  "current_section",
+  "cur_buying",
+  "last_purchase_rate",
+  "cur_selling",
+  "gp_pct",
+  "gp_amt",
+  "cur_mrp",
+  "new_section",
+  "new_buying",
+  "new_selling",
+  "new_gp_pct",
+  "new_gp_amt",
+  "new_mrp",
+  "discount_pct",
+  "revert_section",
+  "old_buying",
+  "old_selling",
+  "old_mrp",
+  "applied_prices"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_section",
+   "fieldtype": "Section Break",
+   "label": "Current"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cur_buying",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Current TP",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_purchase_rate",
+   "fieldtype": "Currency",
+   "label": "Last TP",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "cur_selling",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Sale Rate",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gp_pct",
+   "fieldtype": "Percent",
+   "label": "GP %",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gp_amt",
+   "fieldtype": "Currency",
+   "label": "GP Amt",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "cur_mrp",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "MRP",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_section",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "new_buying",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "New TP",
+   "precision": "3"
+  },
+  {
+   "columns": 1,
+   "fieldname": "new_selling",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "New Sale Rate",
+   "precision": "3"
+  },
+  {
+   "fieldname": "new_gp_pct",
+   "fieldtype": "Percent",
+   "label": "New GP %",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_gp_amt",
+   "fieldtype": "Currency",
+   "label": "New GP Amt",
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "new_mrp",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "New MRP",
+   "precision": "3"
+  },
+  {
+   "fieldname": "discount_pct",
+   "fieldtype": "Percent",
+   "label": "Discount % on MRP",
+   "precision": "3"
+  },
+  {
+   "fieldname": "revert_section",
+   "fieldtype": "Column Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "old_buying",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Old Buying",
+   "no_copy": 1,
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_selling",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Old Selling",
+   "no_copy": 1,
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_mrp",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Old MRP",
+   "no_copy": 1,
+   "precision": "3",
+   "read_only": 1
+  },
+  {
+   "description": "JSON: [{price_list, item_price, old_rate, created}] used by Cancel to revert",
+   "fieldname": "applied_prices",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "Applied Item Prices",
+   "no_copy": 1,
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dbebt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-12 03:05:36.736135",
+ "modified_by": "Administrator",
+ "module": "Update Product Price Utility",
+ "name": "Price Update Tool Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
